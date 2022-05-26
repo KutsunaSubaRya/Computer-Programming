@@ -46,13 +46,21 @@ int main() {
 	std::cout << "s3: " << s3 << '\n';
 	std::cout << "s1 + ',' + ' ' + s2 + \", \" + s3: " << s1 + ',' + ' ' + s2 + ", " + s3 << '\n';
 	std::cout << "-----relational-------\n";
-	std::cout << "s1: " << s1 << '\n' << "s2: " << s2 << '\n';
+	std::cout << "s1: " << s1 << '\n' << "s2: " << s2 << '\n' << "s3: " << s3 << "\n\n";
 	std::cout << "s1 == s2: " << ((s1 == s2) ? "True" : "False") << '\n';
+	std::cout << "s2 == s3: " << ((s2 == s3) ? "True" : "False") << "\n";
+	std::cout << "s1 == \"abc\": " << ((s1 == "abc") ? "True" : "False") << "\n\n";
 	std::cout << "s1 != s2: " << ((s1 != s2) ? "True" : "False") << '\n';
+	std::cout << "s2 != s3: " << ((s2 != s3) ? "True" : "False") << "\n";
+	std::cout << "s2 != \"abc\": " << ((s2 != "abc") ? "True" : "False") << "\n\n";
 	std::cout << "s1 < s2: " << ((s1 < s2) ? "True" : "False") << '\n';
+	std::cout << "s2 < s3: " << ((s2 < s3) ? "True" : "False") << "\n\n";
 	std::cout << "s1 <= s2: " << ((s1 <= s2) ? "True" : "False") << '\n';
+	std::cout << "s2 <= s3: " << ((s2 <= s3) ? "True" : "False") << "\n\n";
 	std::cout << "s1 > s2: " << ((s1 > s2) ? "True" : "False") << '\n';
+	std::cout << "s2 > s3: " << ((s2 > s3) ? "True" : "False") << "\n\n";
 	std::cout << "s1 >= s2: " << ((s1 >= s2) ? "True" : "False") << '\n';
+	std::cout << "s2 >= s3: " << ((s2 >= s3) ? "True" : "False") << "\n\n";
 	std::cout << "-----iostream-------\n";
 	std::cout << "stringstream ss(\"123456789 12345\\n6789\");\n";
 	std::stringstream ss("123456789 12345\n6789");
@@ -62,9 +70,12 @@ int main() {
 	std::cout << "s2: " << s2 << '\n';
 	std::cout << "s3: " << s3 << '\n';
 	std::cout << "--------clear---------\n";
-	std::cout << "s3.clear();\n";
-	s3.clear();
-	std::cout << "s3.size(): " << s3.size() << '\n';
+	std::cout << "Before s3.clear(): \n";
 	std::cout << "s3.c_ctr(): " << s3.c_str() << '\n';
+	std::cout << "s3.size(): " << s3.size() << '\n';
+	std::cout << "After s3.clear(): \n";
+	s3.clear();
+	std::cout << "s3.c_ctr(): " << s3.c_str() << '\n';
+	std::cout << "s3.size(): " << s3.size() << '\n';
 	return 0;
 }
